@@ -1,0 +1,15 @@
+.about {
+    height: 50vw;
+    display: flex;
+    justify-content: space-around;
+
+    img {
+        width: 25vw;
+        height: 64vh;
+        border-radius: 0.5em;
+    }
+
+    &__description {
+        width: 40%;
+    }
+}

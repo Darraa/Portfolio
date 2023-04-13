@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <ul class="nav__content">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="greating">
+            <a id="home"></a>
+            <h2>
+                Hello, I'm
+            </h2>
+            <h1>
+                a Frontend Developer
+            </h1>
+        </section>
+
+        <section class="about">
+            <a id="about"></a>
+            <img src="./img/photo.jpg" alt="photo">
+
+            <div class="about__description">
+                <h3>
+                    About me
+                </h3>
+                <p>
+                    My name is Dariia Palii and I'm a beginner Frontend developer with strong skills in HTML,
+                    CSS and JavaScript. Though I have not yet worked on a
+                    commercial project, I have developed several websites and
+                    web applications during my studies. I'm constantly learning
+                    and exploring new technologies and tools to improve my
+                    coding abilities and keep up with the latest trends in the
+                    industry.
+                </p><br>
+                <p>
+                    My main motivation for pursuing a career in Frontend development is the ability to create visually
+                    appealing and user-friendly interfaces that can enhance users' online experience. I am passionate
+                    about turning design concepts into interactive web pages and applications. My personal qualities
+                    include attention to detail, self-motivation, and creativity.
+                </p>
+                <button class="custom__btn btn"><span>Download CV</span></button>
+                <button class="custom__btn btn-hire"><span>Hire Me</span></button>
+            </div>
+        </section>
+
+        <section class="skills">
+            <a id="skills"></a>
+            <h3>Skills</h3>
+            <ul class="skills__list">
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-html5"></use>
+                    </svg>
+                    <span>HTML</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-css3"></use>
+                    </svg>
+                    <span>CSS</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-javascript"></use>
+                    </svg>
+                    <span>JavaScript</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-sass"></use>
+                    </svg>
+                    <span>SASS</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-git"></use>
+                    </svg>
+                    <span>Git</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-webpack"></use>
+                    </svg>
+                    <span>Webpack</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-bitbucket"></use>
+                    </svg>
+                    <span>Bitbucket</span>
+                </li>
+                <li>
+                    <svg width="60" height="60">
+                        <use xlink:href="./img/skills-sprite.svg#icon-bootstrap"></use>
+                    </svg>
+                    <span>Bootstrap</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="portfolio">
+            <a id="portfolio"></a>
+            <h3>Portfolio</h3>
+
+            <div class="portfolio__item">
+                <div class="portfolio__item-description">
+                    <h4>Todo-list</h4>
+                    <p>This project is an adaptive web app for creating a task list. The project was created using
+                        JavaScript and CSS. All recorded tasks are stored in localStorage.</p>
+                    <a href="https://darraa.github.io/ToDo-List/" target="_blank">View Demo &#129042;</a>
+                </div>
+                <img src="./img/todo-list.jpg" alt="todo-list">
+            </div>
+
+            <div class="portfolio__item left">
+                <div class="portfolio__item-description">
+                    <h4>DaPixel</h4>
+                    <p>This project is a responsive webpage that was created using HTML, JavaScript, and SCSS. The
+                        design
+                        was based on a Figma template and the SCSS code was compiled into CSS.</p>
+                    <a href="https://darraa.github.io/DaPixel/" target="_blank">View Demo &#129042;</a>
+                </div>
+                <img src="./img/dapixel.jpg" alt="dapixel">
+            </div>
+
+            <div class="portfolio__item">
+                <div class="portfolio__item-description">
+                    <h4>Tic Tac Toe</h4>
+                    <p>This project is a simple implementation of the classic game of Tic Tac Toe. The project was
+                        created
+                        using JavaScript and CSS.</p>
+                    <a href="https://darraa.github.io/Tic_Tac_Toe/" target="_blank">View Demo &#129042;</a>
+                </div>
+                <img src="./img/tic-tac-toe.jpg" alt="tic-tac-toe">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a id="contact"></a>
+        <div class="footer__social">
+            <h3>Contact me</h3>
+            <ul class="footer__social-list">
+                <li>
+                    <svg width="30" height="30">
+                        <use xlink:href="./img/contact-sprite.svg#icon-mail"></use>
+                    </svg>
+                    <a href="mailto:dariia.palij@gmail.com">dariia.palij@gmail.com</a>
+                </li>
+                <li>
+                    <svg width="30" height="30">
+                        <use xlink:href="./img/contact-sprite.svg#icon-telegram"></use>
+                    </svg>
+                    <span>@daria_pl</span>
+                </li>
+                <li>
+                    <svg width="30" height="30">
+                        <use xlink:href="./img/contact-sprite.svg#icon-github"></use>
+                    </svg>
+                    <a href="https://github.com/darraa" target="_blank">https://github.com/darraa</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>

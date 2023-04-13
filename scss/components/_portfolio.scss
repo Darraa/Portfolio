@@ -1,0 +1,31 @@
+.portfolio{
+    text-align: center;
+    &__item{
+        display: flex;
+        justify-content: end;
+        margin: 3em 3em 0 0;
+        &-description{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            text-align: left;
+            margin-right: 2em;
+
+            a{
+                color: #8a1931;
+            }
+        }
+        img{
+            width: 28vw;
+            height: 35vh;
+            border-radius: 0.5em;
+        }
+    }
+
+    .left{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 3em;
+    }
+}
