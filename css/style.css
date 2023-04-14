@@ -73,6 +73,10 @@ body {
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 svg {
   fill: #fff;
 }
@@ -100,6 +104,9 @@ h4 {
 }
 
 .nav {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   height: 5vw;
   display: flex;
@@ -129,7 +136,9 @@ h4 {
 .about {
   height: 50vw;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
 }
 .about img {
   width: 25vw;
@@ -314,6 +323,10 @@ svg:hover {
 }
 
 .portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 70vw;
   text-align: center;
 }
 .portfolio__item {

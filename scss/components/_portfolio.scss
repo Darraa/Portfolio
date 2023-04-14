@@ -1,4 +1,8 @@
 .portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vw;
     text-align: center;
     &__item{
         display: flex;

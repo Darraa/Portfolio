@@ -1,7 +1,9 @@
 .about {
     height: 50vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
 
     img {
         width: 25vw;
