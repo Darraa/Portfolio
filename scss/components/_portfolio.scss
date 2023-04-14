@@ -1,14 +1,16 @@
-.portfolio{
+.portfolio {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vw;
+    height: 150vh;
     text-align: center;
-    &__item{
+
+    &__item {
         display: flex;
         justify-content: end;
         margin: 3em 3em 0 0;
-        &-description{
+
+        &-description {
             width: 30%;
             display: flex;
             flex-direction: column;
@@ -16,20 +18,65 @@
             text-align: left;
             margin-right: 2em;
 
-            a{
+            a {
                 color: #8a1931;
             }
         }
-        img{
+
+        img {
             width: 28vw;
             height: 35vh;
             border-radius: 0.5em;
         }
     }
 
-    .left{
+    .left {
         display: flex;
         justify-content: flex-start;
         margin-left: 3em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .portfolio {
+        img {
+            height: 25vh;
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .portfolio {
+        gap: 2em;
+
+        &__item {
+            margin: 0;
+            justify-content: center;
+
+            img {
+                width: 50vw;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolio {
+        height: 215vh;
+
+        &__item {
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            &-description {
+                width: 80%;
+            }
+
+            img {
+                width: 80vw;
+            }
+        }
     }
 }

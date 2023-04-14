@@ -1,7 +1,14 @@
 .greating{
-    height: 50vw;
+    height: 100vh;
     padding-left: 10em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    .greating{
+        height: 110vh;
+        padding-left: 2em;
+    }
 }

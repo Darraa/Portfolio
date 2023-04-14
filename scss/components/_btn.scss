@@ -104,3 +104,9 @@
 .btn span:hover:after {
     width: 100%;
 }
+
+@media screen and (max-width: 320px) {
+    .btn{
+        margin-right: 0;
+    }
+}

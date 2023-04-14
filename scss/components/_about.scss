@@ -1,5 +1,5 @@
 .about {
-    height: 50vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,5 +13,45 @@
 
     &__description {
         width: 40%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .about{
+        img{
+        height: 50vh;
+        }
+
+        &__description{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .about{
+        img{
+        width: 30vw;
+        }
+
+        &__description{
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about{
+        height: 110vh;
+        flex-direction: column;
+        gap: 1em;
+
+        img{
+            width: 40vw;
+            }
+
+        &__description{
+            width: 90%;
+        }
     }
 }

@@ -1,5 +1,5 @@
 .skills{
-    height: 50vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,4 +23,38 @@
 svg:hover{
     fill: #8a193199;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 960px) {
+    .skills{
+        &__list{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .skills{
+        &__list{
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills{
+        height: 110vh;
+        &__list{
+            width: 95%;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .skills{
+        svg{
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
