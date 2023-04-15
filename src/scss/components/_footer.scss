@@ -10,6 +10,9 @@
         padding: 2em;
     
         &-list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3em;
             li{
                 display: flex;
                 align-items: center;
@@ -19,5 +22,8 @@
                 color: #fff;
             }
         }
+    }
+    svg{
+        fill: #8a1931;
     }
 }

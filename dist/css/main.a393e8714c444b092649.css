@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap");
+/*!******************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./css/style.css ***!
+  \******************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap);
+/*!**********************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js!./css/style.css (1) ***!
+  \**********************************************************************/
 * {
   padding: 0;
   margin: 0;
@@ -138,9 +144,23 @@ h4 {
   gap: 2em;
   padding-right: 2em;
 }
-.nav__content a {
+
+.hide {
+  display: none;
+}
+
+.link {
   text-decoration: none;
   color: #fff;
+}
+
+.active {
+  color: #8a1931;
+}
+
+a:hover {
+  color: #8a1931;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 320px) {
@@ -314,56 +334,6 @@ h4 {
     margin-right: 0;
   }
 }
-.btn-hire {
-  border: none;
-  background: #8a1931;
-  color: #fff;
-  overflow: hidden;
-}
-
-.btn-hire:hover {
-  text-decoration: none;
-  color: #fff;
-}
-
-.btn-hire:before {
-  position: absolute;
-  content: "";
-  display: inline-block;
-  top: -180px;
-  left: 0;
-  width: 30px;
-  height: 100%;
-  background-color: #fff;
-  animation: shiny-btn1 3s ease-in-out infinite;
-}
-
-.btn-hire:hover {
-  opacity: 0.7;
-}
-
-.btn-hire:active {
-  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.3), -4px -4px 6px 0 rgba(116, 125, 136, 0.2), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.2), inset 4px 4px 6px 0 rgba(0, 0, 0, 0.2);
-}
-
-@keyframes shiny-btn1 {
-  0% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0;
-  }
-  80% {
-    -webkit-transform: scale(0) rotate(45deg);
-    opacity: 0.5;
-  }
-  81% {
-    -webkit-transform: scale(4) rotate(45deg);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(50) rotate(45deg);
-    opacity: 0;
-  }
-}
 .skills {
   height: 100vh;
   display: flex;
@@ -491,6 +461,11 @@ svg:hover {
   align-items: center;
   padding: 2em;
 }
+.footer__social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
 .footer__social-list li {
   display: flex;
   align-items: center;
@@ -498,4 +473,101 @@ svg:hover {
 }
 .footer__social-list a {
   color: #fff;
+}
+.footer svg {
+  fill: #8a1931;
+}
+
+.modal {
+  display: none;
+}
+.modal__show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 51;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(88, 84, 145, 0.4941176471);
+}
+.modal__window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 450px;
+  padding: 30px;
+  border: 1px solid none;
+  border-radius: 1.5rem;
+  background: #2a293a;
+}
+.modal__close-btn {
+  padding: 0;
+  align-self: flex-end;
+  background: none;
+}
+.modal__close-btn:hover {
+  transition: 0.3s;
+  fill: #8a1931;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.modal__form-field {
+  position: relative;
+}
+.modal__form-field input, .modal__form-field textarea {
+  width: 80%;
+  height: 40px;
+  padding-left: 42px;
+  outline: rgba(0, 0, 0, 0);
+  border-radius: 1rem;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
+.modal__form-field textarea {
+  height: 20%;
+  resize: none;
+  padding-top: 20px;
+}
+.modal__form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  padding-top: 10px;
+  pointer-events: none;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__form-btn {
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px 30px;
+  align-self: center;
+  background: #8a1931;
+}
+.modal__form-btn:hover {
+  background: none;
+  border: 1px solid #8a1931;
+  color: #8a1931;
+}
+.modal svg {
+  fill: #8a1931;
+}
+
+.modal__input:focus,
+.modal__textarea:focus {
+  border-color: #8a1931;
+}
+
+.modal__input:focus + .modal__form-icon {
+  fill: #8a1931;
+}
+
+body.modal__open {
+  overflow: hidden;
 }

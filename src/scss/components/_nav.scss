@@ -1,4 +1,4 @@
-.nav{
+.nav {
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -9,23 +9,39 @@
     justify-content: flex-end;
     background: #2a293a;
     box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.05);
-    &__content{
+    &__content {
         display: flex;
         gap: 2em;
         padding-right: 2em;
-        a{ 
-            text-decoration: none;
-            color: #fff;
-        }
     }
 }
 
+.hide{
+    display: none;
+}
+
+
+.link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active {
+    color: #8a1931;
+}
+
+a:hover {
+    color: #8a1931;
+    transition: 0.3s;
+}
+
 @media screen and (max-width: 320px) {
-    .nav{
+    .nav {
         justify-content: flex-start;
+
         &__content {
             gap: 1em;
             padding-right: 0;
+        }
     }
-}
 }
