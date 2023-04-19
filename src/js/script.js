@@ -15,7 +15,6 @@ function currentSection() {
 }
 
 function onScroll() {
-
     let currentSectionIndex = 0;
     let prevSectionBottom = 0;
 
@@ -48,9 +47,7 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
 currentSection();
-
 
 // Modal
 const btn = document.querySelectorAll(".btn__show-modal");
@@ -77,3 +74,40 @@ function closeModal() {
     modal.classList.remove("modal__show");
     document.body.style.overflow = "auto";
 }
+
+// View counter
+
+function viewCounter() {
+    let visitCount = 0;
+    let totalDuration = Number(localStorage.totalDuration) || 0;
+    let lastVisitTime = null;
+
+    if (typeof Storage !== "undefined") {
+        if (localStorage.visitCount) {
+            localStorage.visitCount = Number(localStorage.visitCount) + 1;
+        } else {
+            localStorage.visitCount = 1;
+            localStorage.firstVisitTime = new Date().getTime();
+        }
+
+        const currentTime = new Date().getTime();
+
+        if (localStorage.lastVisitTime) {
+            const duration = currentTime - Number(localStorage.lastVisitTime);
+            totalDuration += duration;
+        }
+
+        localStorage.lastVisitTime = currentTime;
+        localStorage.totalDuration = totalDuration;
+        const averageDuration = totalDuration / localStorage.visitCount;
+        const totalTime = Math.round(totalDuration / 1000);
+        const averageTime = Math.round(averageDuration / 1000);
+
+        console.log(`Total time: ${totalTime} s`);
+        console.log(`Average time: ${averageTime} s`);
+    } else {
+        console.log("ERROR");
+    }
+}
+
+viewCounter();
