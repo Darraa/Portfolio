@@ -1,5 +1,5 @@
 // navbar
-import "../css/style.css";
+// import "../css/style.css";
 const navLinks = document.querySelectorAll(".link");
 const sections = document.querySelectorAll("section");
 
@@ -119,3 +119,13 @@ function viewCounter() {
 }
 
 viewCounter();
+
+
+// PWA
+document.addEventListener("DOMContentLoaded", () =>{
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+            navigator.serviceWorker.register("./serviceWorker.js");
+        });
+    }
+})
