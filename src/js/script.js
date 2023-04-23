@@ -79,32 +79,40 @@ function closeModal() {
 
 function viewCounter() {
     let visitCount = 0;
-    let totalDuration = Number(localStorage.totalDuration) || 0;
+    let totalDuration = Number(localStorage.getItem("totalDuration")) || 0;
     let lastVisitTime = null;
 
     if (typeof Storage !== "undefined") {
-        if (localStorage.visitCount) {
-            localStorage.visitCount = Number(localStorage.visitCount) + 1;
+        if (localStorage.getItem("visitCount")) {
+            localStorage.setItem(
+                "visitCount",
+                Number(localStorage.getItem("visitCount")) + 1
+            );
         } else {
-            localStorage.visitCount = 1;
-            localStorage.firstVisitTime = new Date().getTime();
+            localStorage.setItem("visitCount", 1);
+            localStorage.setItem("firstVisitTime", new Date().getTime());
         }
 
-        const currentTime = new Date().getTime();
+        window.addEventListener("beforeunload", function () {
+            const currentTime = new Date().getTime();
 
-        if (localStorage.lastVisitTime) {
-            const duration = currentTime - Number(localStorage.lastVisitTime);
-            totalDuration += duration;
-        }
+            if (localStorage.getItem("lastVisitTime")) {
+                const duration =
+                    currentTime - Number(localStorage.getItem("lastVisitTime"));
+                totalDuration += duration;
+            }
 
-        localStorage.lastVisitTime = currentTime;
-        localStorage.totalDuration = totalDuration;
-        const averageDuration = totalDuration / localStorage.visitCount;
-        const totalTime = Math.round(totalDuration / 1000);
-        const averageTime = Math.round(averageDuration / 1000);
+            localStorage.setItem("lastVisitTime", currentTime);
+            localStorage.setItem("totalDuration", totalDuration);
+        });
 
-        console.log(`Total time: ${totalTime} s`);
-        console.log(`Average time: ${averageTime} s`);
+        const averageDuration =
+            totalDuration / localStorage.getItem("visitCount");
+            const totalMinutes = Math.round(totalDuration / 60000);
+            const averageMinutes = Math.round(averageDuration / 60000);
+            console.log(`Total duration: ${totalMinutes} min`);
+            console.log(`Average duration: ${averageMinutes} min`);
+            
     } else {
         console.log("ERROR");
     }
